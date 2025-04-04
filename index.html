@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra destinos incríveis com o AmandAway — sua próxima aventura começa aqui!">
+    <meta name="keywords" content="excursão, viagem, turismo, aventura, destinos, passeio, explorar">
+    <meta name="author" content="Amanda Ramos Castilho">
+
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+    
+    <title>AmandAway</title>
+</head>
+
+<body>
+
+    <header>
+      <h1>ExploraTour</h1>
+
+      <nav>
+
+        <ul>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#form">Inscrição</a></li>
+          <li><a href="inscricoes.html">Minhas Inscrições</a></li>
+          <li><button id="temaToggle">🌙</button></li>
+        </ul>
+
+      </nav>
+    </header>
+  
+    <section class="hero" data-aos="fade-up">
+      <h2>Partiu Aventura?</h2>
+      <p>Descubra os melhores destinos com a gente!</p>
+    </section>
+  
+    <section id="destinos" class="cards">
+      <h2 data-aos="zoom-in">Nossas Excursões</h2>
+
+      <div class="card-container">
+
+        <div class="card" data-aos="fade-right">
+          <h3>Chapada dos Veadeiros</h3>
+          <p>Natureza, cachoeiras e trilhas incríveis!</p>
+        </div>
+
+        <div class="card" data-aos="fade-up">
+          <h3>Paraty - RJ</h3>
+          <p>Praia, cultura e gastronomia maravilhosa!</p>
+        </div>
+
+        <div class="card" data-aos="fade-left">
+          <h3>Bonito - MS</h3>
+          <p>Ecoturismo e paisagens de tirar o fôlego.</p>
+        </div>
+
+      </div>
+    </section>
+  
+    <section id="form">
+      <h2>Inscreva-se</h2>
+
+      <form id="formInscricao">
+
+        <input type="text" id="nome" placeholder="Seu nome" required />
+        <input type="email" id="email" placeholder="Seu e-mail" required />
+
+        <select id="destino" required>
+          <option value="">Escolha o destino</option>
+          <option>Chapada dos Veadeiros</option>
+          <option>Paraty - RJ</option>
+          <option>Bonito - MS</option>
+        </select>
+
+        <button type="submit">Enviar</button>
+        
+      </form>
+    </section>
+  
+    <footer>
+      <p>&copy; 2025 AmandAway - Todos os direitos reservados.</p>
+    </footer>
+  
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+  </html>
