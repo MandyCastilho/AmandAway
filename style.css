@@ -155,19 +155,25 @@ form button {
 }
 
 .card {
-  background: var(--amarelo);
+  position: relative;
+  background-size: cover;
+  background-position: center;
   color: #fff;
   padding: 2rem;
   width: 270px;
+  height: 320px;
   border-radius: 16px;
   box-shadow: 0 6px 16px var(--sombra);
   text-align: center;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.8); /* tampa a imagem */
+  background-image: var(--bg-img);
 }
 
 .card:hover {
+  background-color: rgba(0, 0, 0, 0); /* deixa a imagem aparecer */
   transform: translateY(-8px);
-  background: linear-gradient(135deg, var(--laranja), var(--rosa));
   color: var(--branco);
 }
 
