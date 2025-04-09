@@ -51,7 +51,20 @@ if (form) {
     inscricoesSalvas.push(inscricao);
     localStorage.setItem("inscricoes", JSON.stringify(inscricoesSalvas));
 
-    alert("Inscrição realizada com sucesso!");
+    const mensagem = document.getElementById("mensagem");
+    if (mensagem) {
+      mensagem.textContent = "Inscrição realizada com sucesso!";
+      mensagem.style.color = "green";
+      mensagem.style.fontWeight = "bold";
+
+      // Esconde a mensagem após 5 segundos
+      setTimeout(() => {
+        mensagem.textContent = "";
+      }, 5000);
+    }
+
+    // Limpa o formulário
     form.reset();
   });
 }
+
