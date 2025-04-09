@@ -197,6 +197,13 @@ form button:active {
   transform: scale(0.98);
 }
 
+.mensagem-feedback {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition: opacity 0.3s ease;
+}
+
 /*         CARDS              */
 
 .cards {
