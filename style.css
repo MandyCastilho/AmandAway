@@ -1,130 +1,151 @@
 @charset "UTF-8";
 
 :root {
-    --roxo: #a6026c;
-    --rosa: #d1024e;
-    --laranja: #fc3903;
-    --amarelo: #ffab03;
-    --branco: #fff;
-    --cinza: #f2f2f2;
-  }
+  --roxo: #8e2de2;
+  --rosa: #ff416c;
+  --laranja: #ff6a00;
+  --amarelo: #ffd200;
+  --branco: #ffffff;
+  --cinza: #f4f4f4;
+  --cinza-claro: #e9e9e9;
+  --texto: #333333;
+  --sombra: rgba(0, 0, 0, 0.08);
+}
 
-  ::-webkit-scrollbar {
-    width: 12px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: var(--cinza); 
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: var(--roxo);
-    border-radius: 6px;
-    border: 2px solid var(--cinza);
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--rosa);
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    background-color: var(--cinza);
-    color: #333;
-  }
-  
-  header {
-    background-color: var(--roxo);
-    color: var(--branco);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+::-webkit-scrollbar {
+  width: 10px;
+}
 
-  #form h2 {
-    text-align: center;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  nav a {
-    color: var(--branco);
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .hero {
-    background: linear-gradient(to right, var(--rosa), var(--laranja));
-    color: var(--branco);
-    text-align: center;
-    padding: 4rem 2rem;
-  }
-  
-  .hero button {
-    background-color: var(--amarelo);
-    color: #000;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 8px;
-    margin-top: 1rem;
-    transition: background-color 0.3s;
-  }
-  
-  .hero button:hover {
-    background-color: var(--laranja);
-    color: var(--branco);
-  }
-  
-  .cards {
-    padding: 3rem 2rem;
-    background-color: #fff;
-  }
-  
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 1.5rem;
-  }
-  
-  .card {
-    background-color: var(--amarelo);
-    padding: 1.5rem;
-    border-radius: 12px;
-    width: 250px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    background-color: var(--laranja);
-    color: white;
-  }
-  
-  section#sobre, section#contato {
-    padding: 3rem 2rem;
-    text-align: center;
-  }
-  
-  footer {
-    background-color: var(--roxo);
-    color: var(--branco);
-    text-align: center;
-    padding: 1rem;
-  }
+::-webkit-scrollbar-track {
+  background: var(--cinza);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--roxo), var(--rosa));
+  border-radius: 8px;
+  border: 2px solid var(--cinza);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--rosa), var(--laranja));
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: var(--cinza);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(90deg, var(--roxo), var(--rosa));
+  color: var(--branco);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px var(--sombra);
+}
+
+#form h2 {
+  text-align: center;
+  margin: 4rem 0 2rem;
+  font-size: 2.25rem;
+  color: var(--roxo);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+.hero {
+  background: linear-gradient(to right, var(--rosa), var(--laranja));
+  color: var(--branco);
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero button {
+  background: var(--amarelo);
+  color: #000;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px var(--sombra);
+}
+
+.hero button:hover {
+  background: var(--laranja);
+  color: var(--branco);
+  transform: scale(1.05);
+}
+
+.cards {
+  padding: 4rem 2rem;
+  background-color: var(--branco);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--amarelo);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 270px;
+  box-shadow: 0 6px 16px var(--sombra);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, var(--laranja), var(--rosa));
+  color: var(--branco);
+}
+
+section#sobre, section#contato {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--cinza-claro);
+}
+
+footer {
+  background: var(--roxo);
+  color: var(--branco);
+  text-align: center;
+  padding: 1.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 -4px 12px var(--sombra);
+}
+
 
 
 
