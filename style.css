@@ -87,6 +87,13 @@ nav a:hover {
   padding: 5rem 2rem;
 }
 
+.hero .logo {
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--sombra);
+}
+
 .hero button {
   background: var(--amarelo);
   color: #000;
