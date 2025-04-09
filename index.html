@@ -15,73 +15,127 @@
 </head>
 
 <body>
+  <header>
+    <h1>AmandAway</h1>
+    <nav>
+      <ul>
+        <li><a href="#destinos">Destinos</a></li>
+        <li><a href="#form">Inscrição</a></li>
+        <li><a href="inscricoes.html">Minhas Inscrições</a></li>
+        <li><button id="temaToggle">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-      <h1>AmandAway</h1>
-      <nav>
-        <ul>
-          <li><a href="#destinos">Destinos</a></li>
-          <li><a href="#form">Inscrição</a></li>
-          <li><a href="inscricoes.html">Minhas Inscrições</a></li>
-          <li><button id="temaToggle">🌙</button></li>
-        </ul>
-      </nav>
-    </header>
-  
-    <section class="hero" data-aos="fade-up">
+  <section class="hero" data-aos="fade-up" style="display: flex; align-items: center; gap: 1rem;">
+    <img src="img/logo.png" alt="Logo AmandAway" >
+    <div>
       <h2>Partiu Aventura?</h2>
       <p>Descubra os melhores destinos com a gente!</p>
-    </section>
-  
-    <section id="destinos" class="cards">
-      <h2 data-aos="zoom-in">Nossas Excursões</h2>
+    </div>
+  </section>
 
-      <div class="card-container">
+  <section id="destinos" class="cards">
+    <h2 data-aos="zoom-in">Nossas Excursões</h2>
 
-        <div class="card" data-aos="fade-right">
+    <div class="card-container">
+
+      <!-- Cada card com imagem, texto e botão WhatsApp -->
+      <div class="card" data-aos="fade-right" style="background-image: url('img/chapada.png');">
+        <div class="card-content">
           <h3>Chapada dos Veadeiros</h3>
           <p>Natureza, cachoeiras e trilhas incríveis!</p>
+          <a href="https://wa.me/5511985026264?!" target="_blank" class="whatsapp-btn">Fale conosco</a>
         </div>
+      </div>
 
-        <div class="card" data-aos="fade-up">
+      <div class="card" data-aos="fade-up" style="background-image: url('img/paraty.png');">
+        <div class="card-content">
           <h3>Paraty - RJ</h3>
           <p>Praia, cultura e gastronomia maravilhosa!</p>
+          <a href="https://wa.me/5511985026264?!" target="_blank" class="whatsapp-btn">Fale conosco</a>
         </div>
+      </div>
 
-        <div class="card" data-aos="fade-left">
+      <div class="card" data-aos="fade-left" style="background-image: url('img/bonito.png');">
+        <div class="card-content">
           <h3>Bonito - MS</h3>
           <p>Ecoturismo e paisagens de tirar o fôlego.</p>
+          <a href="https://wa.me/5511985026264?!" target="_blank" class="whatsapp-btn">Fale conosco</a>
         </div>
-
       </div>
-    </section>
-  
-    <section id="form">
-      <h2>Inscreva-se</h2>
 
-      <form id="formInscricao">
+      <div class="card" data-aos="fade-right" style="background-image: url('img/lencois.png');">
+        <div class="card-content">
+          <h3>Lençóis Maranhenses - MA</h3>
+          <p>Dunas e lagoas cristalinas de outro mundo!</p>
+          <a href="https://wa.me/5511985026264?!" target="_blank" class="whatsapp-btn">Fale conosco</a>
+        </div>
+      </div>
 
-        <input type="text" id="nome" placeholder="Seu nome" required />
-        <input type="email" id="email" placeholder="Seu e-mail" required />
+      <div class="card" data-aos="fade-up" style="background-image: url('img/ilha.png');">
+        <div class="card-content">
+          <h3>Ilhabela - SP</h3>
+          <p>Praias paradisíacas e cachoeiras no meio da mata atlântica.</p>
+          <a href="https://wa.me/5511985026264?!" target="_blank" class="whatsapp-btn">Fale conosco</a>
+        </div>
+      </div>
 
-        <select id="destino" required>
-          <option value="">Escolha o destino</option>
-          <option>Chapada dos Veadeiros</option>
-          <option>Paraty - RJ</option>
-          <option>Bonito - MS</option>
-        </select>
+      <div class="card" data-aos="fade-left" style="background-image: url('img/gramado.png');">
+        <div class="card-content">
+          <h3>Gramado - RS</h3>
+          <p>Arquitetura charmosa e o melhor chocolate do Brasil.</p>
+          <a href="https://wa.me/5511985026264!" target="_blank" class="whatsapp-btn">Fale conosco</a>
+        </div>
+      </div>
 
-        <button type="submit">Enviar</button>
+      <div class="card" data-aos="fade-right" style="background-image: url('img/jalapao.png');">
+        <div class="card-content">
+          <h3>Jalapão - TO</h3>
+          <p>Fervedouros, dunas douradas e paisagens exóticas!</p>
+          <a href="https://wa.me/5511985026264?!" target="_blank" class="whatsapp-btn">Fale conosco</a>
+        </div>
+      </div>
 
-      </form>
-    </section>
-  
-    <footer>
-      <p>&copy; 2025 AmandAway - Todos os direitos reservados.</p>
-    </footer>
-  
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script src="script.js"></script>
+      <div class="card" data-aos="fade-up" style="background-image: url('img/cipo.png');">
+        <div class="card-content">
+          <h3>Serra do Cipó - MG</h3>
+          <p>Para quem ama trilhas, cachoeiras e um bom queijo mineiro!</p>
+          <a href="https://wa.me/5511985026264?" target="_blank" class="whatsapp-btn">Fale conosco</a>
+        </div>
+      </div>
 
-  </body>
-  </html>
+    </div>
+  </section>
+
+  <section id="form">
+    <h2>Inscreva-se</h2>
+
+    <form id="formInscricao">
+      <input type="text" id="nome" placeholder="Seu nome" required />
+      <input type="email" id="email" placeholder="Seu e-mail" required />
+
+      <select id="destino" required>
+        <option value="">Escolha o destino</option>
+        <option>Chapada dos Veadeiros</option>
+        <option>Paraty - RJ</option>
+        <option>Bonito - MS</option>
+        <option>Lençóis Maranhenses - MA</option>
+        <option>Ilhabela - SP</option>
+        <option>Gramado - RS</option>
+        <option>Jalapão - TO</option>
+        <option>Serra do Cipó - MG</option>
+      </select>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AmandAway - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
