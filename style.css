@@ -19,8 +19,9 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Impede rolagem horizontal */
+  overflow-x: hidden;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -48,15 +49,11 @@ html, body {
   cursor: pointer;
 }
 
-/*          BODY & GERAL      */
-
 body {
   font-family: 'Segoe UI', sans-serif;
-  margin: 0;
   background-color: var(--cinza);
   color: var(--texto);
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 /*           HEADER           */
@@ -69,6 +66,11 @@ header {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 12px var(--sombra);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 nav ul {
@@ -97,6 +99,7 @@ nav a:hover {
   color: var(--branco);
   text-align: center;
   padding: 5rem 2rem;
+  margin-top: 80px;
 }
 
 .hero .logo {
@@ -146,7 +149,7 @@ nav a:hover {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-form {
+#form form {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -213,7 +216,7 @@ form button:active {
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   justify-content: center;
   margin-top: 2rem;
@@ -221,6 +224,7 @@ form button:active {
 
 .card {
   position: relative;
+  background-image: var(--bg-img, url('default.jpg'));
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -232,12 +236,11 @@ form button:active {
   text-align: center;
   transition: all 0.4s ease-in-out;
   background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.8); /* tampa a imagem */
-  background-image: var(--bg-img);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .card:hover {
-  background-color: rgba(0, 0, 0, 0); /* deixa a imagem aparecer */
+  background-color: rgba(0, 0, 0, 0);
   transform: translateY(-8px);
   color: var(--branco);
 }
@@ -246,7 +249,6 @@ form button:active {
   margin-top: 0;
   font-size: 1.4rem;
 }
-
 
 /*     BOTÃO WHATSAPP         */
 
@@ -265,6 +267,11 @@ form button:active {
 
 .whatsapp-btn:hover {
   background-color: #1ebe5d;
+}
+
+.whatsapp-btn:focus {
+  outline: 2px dashed #fff;
+  outline-offset: 4px;
 }
 
 /*     SEÇÕES PADRÕES         */
@@ -301,17 +308,13 @@ body.escuro footer {
 }
 
 body.escuro .card {
-  background-image: var(--bg-img);
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.8); /* continua tampando a imagem */
+  background-image: var(--bg-img, url('default.jpg'));
+  background-color: rgba(0, 0, 0, 0.8);
   color: #eee;
-  box-shadow: 0 6px 16px var(--sombra);
 }
 
 body.escuro .card:hover {
-  background-color: rgba(0, 0, 0, 0); /* revela a imagem no hover */
+  background-color: rgba(0, 0, 0, 0);
   transform: translateY(-8px);
   color: var(--branco);
 }
@@ -326,32 +329,26 @@ body.escuro h2[data-aos="zoom-in"] {
 
 /* ===== RESPONSIVIDADE ===== */
 
-/* Telas menores que 768px (celulares) */
 @media (max-width: 768px) {
   header {
-    display: flex;
     flex-direction: column;
     text-align: center;
     padding: 1.5rem 1rem;
-    width: 100%;
   }
 
   nav ul {
-    display: flex;
     flex-direction: column;
     gap: 1rem;
     margin-top: 1rem;
-    padding: 0;
   }
 
   .hero {
     padding: 3rem 1rem;
-    max-width: 100%;
+    margin-top: 300px;
   }
 
   .hero .logo {
     width: 100px;
-    max-width: 100%;
   }
 
   .hero button {
@@ -359,17 +356,15 @@ body.escuro h2[data-aos="zoom-in"] {
     font-size: 1rem;
   }
 
-  form {
+  #form {
     margin: 1rem auto;
     padding: 0 1rem;
     width: 100%;
-    max-width: 100%;
   }
 
   .card-container {
     display: flex;
     flex-direction: column;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
     align-items: center;
     padding: 0 1rem;
     width: 100%;
@@ -382,7 +377,6 @@ body.escuro h2[data-aos="zoom-in"] {
   }
 }
 
-/* Telas entre 769px e 1024px (tablets) */
 @media (min-width: 769px) and (max-width: 1024px) {
   nav ul {
     gap: 1.5rem;
@@ -393,15 +387,13 @@ body.escuro h2[data-aos="zoom-in"] {
   }
 
   .card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     padding: 0 1rem;
   }
 
   .card {
-    width: 100%; /* Garante que o card ocupe 100% da célula do grid */
-    max-width: 100%;
+    width: 100%;
   }
 }
 
