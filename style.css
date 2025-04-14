@@ -73,6 +73,13 @@ header {
   z-index: 1000;
 }
 
+.after-header {
+  margin-top: 6rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+
 nav ul {
   list-style: none;
   display: flex;
