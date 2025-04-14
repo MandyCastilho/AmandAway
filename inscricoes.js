@@ -1,20 +1,30 @@
-// Alternância de tema claro/escuro
 const temaToggle = document.getElementById("temaToggle");
 
-// Verifica se o botão existe
 if (temaToggle) {
-  // Aplica o tema salvo ao carregar a página
+  // Verifica se há um tema salvo no localStorage
   const temaSalvo = localStorage.getItem("tema");
+
+  // Se não houver tema salvo, define o modo claro como padrão
   if (temaSalvo === "escuro") {
     document.body.classList.add("escuro");
+    temaToggle.textContent = "🌙";  // Lua (modo escuro)
+  } else {
+    document.body.classList.remove("escuro");
+    temaToggle.textContent = "🌞";  // Sol (modo claro)
+    // Define o tema como claro se não houver nada salvo
+    localStorage.setItem("tema", "claro");
   }
 
-  // Alterna o tema ao clicar no botão
   temaToggle.addEventListener("click", () => {
-    document.body.classList.toggle("escuro");
+    const body = document.body;
+    const estaEscuro = body.classList.toggle("escuro");
 
-    const temaAtual = document.body.classList.contains("escuro") ? "escuro" : "claro";
+    // Atualiza o tema no localStorage
+    const temaAtual = estaEscuro ? "escuro" : "claro";
     localStorage.setItem("tema", temaAtual);
+
+    // Atualiza o ícone do botão
+    temaToggle.textContent = estaEscuro ? "🌙" : "🌞";
   });
 }
 
