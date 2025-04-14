@@ -298,19 +298,75 @@ footer {
 /*        TEMA ESCURO         */
 
 body.escuro {
-  background-color: #1a1a1a;
-  color: #eee;
+  background-color: #121212;
+  color: var(--texto);
 }
 
 body.escuro header,
 body.escuro footer {
-  background-color: #111;
+  background-color: #1c1c1c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+body.escuro nav a {
+  color: var(--branco);
+}
+
+body.escuro .hero {
+  background: linear-gradient(to right, #320048, #8e2de2);
+  color: var(--branco);
+}
+
+body.escuro .hero button {
+  background: var(--laranja);
+  color: var(--branco);
+}
+
+body.escuro .hero button:hover {
+  background: var(--rosa);
+  color: #000;
+}
+
+body.escuro #form {
+  background: #1e1e1e;
+  color: var(--texto);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+body.escuro form label {
+  color: var(--texto);
+}
+
+body.escuro form input,
+body.escuro form select {
+  background: #2a2a2a;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+body.escuro form input:focus,
+body.escuro form select:focus {
+  border-color: var(--roxo);
+  box-shadow: 0 0 0 2px rgba(142, 45, 226, 0.4);
+}
+
+body.escuro form button {
+  background-color: var(--roxo);
+  color: var(--branco);
+}
+
+body.escuro form button:hover {
+  background-color: #6c22b3;
+}
+
+body.escuro .cards {
+  background-color: #1a1a1a;
 }
 
 body.escuro .card {
-  background-image: var(--bg-img, url('default.jpg'));
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #eee;
+  background-color: rgba(30, 30, 30, 0.85);
+  color: var(--texto);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
 body.escuro .card:hover {
@@ -319,14 +375,19 @@ body.escuro .card:hover {
   color: var(--branco);
 }
 
-body.escuro .hero {
-  background: linear-gradient(to right, #54022e, #fc3903);
+body.escuro section#sobre,
+body.escuro section#contato {
+  background-color: #1c1c1c;
+  color: var(--texto);
 }
 
-body.escuro h2[data-aos="zoom-in"] {
-  color: #000 !important;
+body.escuro .whatsapp-btn {
+  background-color: #128c7e;
 }
 
+body.escuro .whatsapp-btn:hover {
+  background-color: #075e54;
+}
 /* ===== RESPONSIVIDADE ===== */
 
 @media (max-width: 768px) {
