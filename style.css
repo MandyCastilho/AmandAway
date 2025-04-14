@@ -365,20 +365,32 @@ body.escuro form button:hover {
   background-color: #6c22b3;
 }
 
+body.escuro .card .card-content {
+  position: relative;
+  z-index: 2;
+}
+
 body.escuro .cards {
   background-color: #1a1a1a;
 }
 
 body.escuro .card {
-  background-color: rgba(30, 30, 30, 0.85);
-  color: var(--texto);
+  position: relative;
+  color: white;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
 }
 
 body.escuro .card:hover {
-  background-color: rgba(0, 0, 0, 0);
   transform: translateY(-8px);
-  color: var(--branco);
+  filter: brightness(1.1);
+  border: 2px solid #fd6084; /* rosa vibrante */
+  box-shadow:
+    0 0 8px #fd6084,
+    0 0 16px #fd6084aa,
+    0 0 24px #fd608488;
 }
 
 body.escuro section#sobre,
@@ -394,6 +406,11 @@ body.escuro .whatsapp-btn {
 body.escuro .whatsapp-btn:hover {
   background-color: #075e54;
 }
+
+body.escuro .after-header{
+  color: white;
+}
+
 /* ===== RESPONSIVIDADE ===== */
 
 @media (max-width: 768px) {
