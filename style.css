@@ -308,14 +308,35 @@ body.escuro {
   color: var(--texto);
 }
 
+body.escuro .after-header{
+  color: white;
+}
+
+body.escuro h2{
+  color: #ffd200;
+}
+
 body.escuro header,
 body.escuro footer {
-  background-color: #1c1c1c;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(to right, #1c1c1c, #2a2a2a);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid #444;
+  color: var(--branco);
+}
+
+body.escuro header h1 {
+  color: var(--rosa);
+  text-shadow: 0 0 4px #fd6084aa;
 }
 
 body.escuro nav a {
   color: var(--branco);
+  transition: color 0.3s ease;
+}
+
+body.escuro nav a:hover {
+  color: var(--laranja);
+  text-shadow: 0 0 6px var(--laranja);
 }
 
 body.escuro .hero {
@@ -405,10 +426,6 @@ body.escuro .whatsapp-btn {
 
 body.escuro .whatsapp-btn:hover {
   background-color: #075e54;
-}
-
-body.escuro .after-header{
-  color: white;
 }
 
 /* ===== RESPONSIVIDADE ===== */
