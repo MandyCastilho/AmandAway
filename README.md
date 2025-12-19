@@ -116,7 +116,7 @@ O **JavaScript** é responsável por toda a interatividade, persistência de dad
 
   ---
 
-  ## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**
 - **CSS3**
