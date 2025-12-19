@@ -112,4 +112,54 @@ O **JavaScript** é responsável por toda a interatividade, persistência de dad
 - Inicialização simples:
   ```js
   AOS.init();
+- Melhora a experiência visual sem comprometer a performance
+
+  ---
+
+  ## 🛠️ Tecnologias Utilizadas
+
+- **HTML5**
+- **CSS3**
+- **JavaScript (ES6+)**
+- **AOS.js**
+- **LocalStorage**
+- **WhatsApp API**
+
+---
+
+## 🎯 Objetivo do Projeto
+
+- Praticar desenvolvimento **front-end**
+- Aplicar **JavaScript na prática**
+- Trabalhar conceitos de **UX/UI**
+- Simular um sistema real de inscrições
+- Criar um projeto sólido para **portfólio acadêmico e profissional**
+
+---
+
+## 👩‍💻 Autora
+
+**Amanda Ramos Castilho**  
+Estudante de Análise e Desenvolvimento de Sistemas  
+
+✨ Projeto desenvolvido para aprendizado e evolução contínua.
+
+---
+
+## 🔮 Possíveis Melhorias Futuras
+
+- Remoção de inscrições
+- Modal de confirmação
+- Filtro por destino
+- Edição de inscrições
+- Integração com API real
+- Autenticação de usuários
+- Versão **PWA**
+
+---
+
+## ✅ Status do Projeto
+
+🚀 **Finalizado** — versão estável para portfólio
+
 
