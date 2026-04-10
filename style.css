@@ -22,6 +22,7 @@ html, body {
   overflow-x: hidden;
   width: 100%;
   scroll-behavior: smooth;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 ::-webkit-scrollbar {
@@ -60,7 +61,7 @@ body {
 /*           HEADER           */
 
 header {
-  background: linear-gradient(90deg, var(--roxo), var(--rosa));
+  /*background: linear-gradient(90deg, var(--roxo), var(--rosa));*/
   color: var(--branco);
   padding: 1rem 2rem;
   display: flex;
@@ -72,13 +73,21 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
+  background: linear-gradient(270deg, #8e2de2, #ff416c, #ff6a00);
+  background-size: 600% 600%;
+  animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
 }
 
 .after-header {
   margin-top: 6rem;
   padding: 2rem;
 }
-
 
 nav ul {
   list-style: none;
@@ -218,11 +227,18 @@ form button:active {
 button {
   margin: 1rem;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
-  background: crimson;
+  background: #8d2de293;
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 /*         CARDS              */
@@ -255,6 +271,7 @@ button {
   transition: all 0.4s ease-in-out;
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .card:hover {
