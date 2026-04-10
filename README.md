@@ -137,10 +137,10 @@ O **JavaScript** é responsável por toda a interatividade, persistência de dad
 
 ---
 
-## 👩‍💻 Autora
+## 🧑‍💻 Autora
 
 **Amanda Ramos Castilho**  
-Estudante de Análise e Desenvolvimento de Sistemas  
+🎓 Formada em Análise e Desenvolvimento de Sistemas 
 
 ✨ Projeto desenvolvido para aprendizado e evolução contínua.
 
@@ -148,7 +148,6 @@ Estudante de Análise e Desenvolvimento de Sistemas
 
 ## 🔮 Possíveis Melhorias Futuras
 
-- Remoção de inscrições
 - Modal de confirmação
 - Filtro por destino
 - Edição de inscrições
@@ -160,6 +159,6 @@ Estudante de Análise e Desenvolvimento de Sistemas
 
 ## ✅ Status do Projeto
 
-🚀 **Finalizado** — versão estável para portfólio
+🚀 **Finalizado** — Projeto completo e funcional
 
 
