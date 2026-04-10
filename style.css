@@ -12,19 +12,6 @@
   --sombra: rgba(0, 0, 0, 0.08);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100%;
-  scroll-behavior: smooth;
-  transition: background 0.4s ease, color 0.4s ease;
-}
-
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -50,6 +37,19 @@ html, body {
   cursor: pointer;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--cinza);
@@ -57,9 +57,7 @@ body {
   line-height: 1.6;
 }
 
-
-/*           HEADER           */
-
+/*HEADER*/
 header {
   /*background: linear-gradient(90deg, var(--roxo), var(--rosa));*/
   color: var(--branco);
@@ -108,8 +106,7 @@ nav a:hover {
   opacity: 0.8;
 }
 
-/*         HERO SECTION       */
-
+/*HERO SECTION*/
 .hero {
   background: linear-gradient(to right, var(--rosa), var(--laranja));
   color: var(--branco);
@@ -145,8 +142,50 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/*        FORMULÁRIO         */
+/*         CARDS              */
+.cards {
+  padding: 4rem 2rem;
+  background-color: var(--branco);
+}
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  position: relative;
+  background-image: var(--bg-img, url('default.jpg'));
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 2rem;
+  width: 100%;
+  height: 320px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px var(--sombra);
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  background-color: rgba(0, 0, 0, 0);
+  transform: translateY(-8px);
+  color: var(--branco);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+/*FORMULÁRIO*/
 #form {
   padding: 2rem 1rem;
   background: var(--fundo-form, #f9f9f9);
@@ -223,70 +262,7 @@ form button:active {
   transition: opacity 0.3s ease;
 }
 
-/* Botão de limpar inscrições*/
-button {
-  margin: 1rem;
-  padding: 0.5rem 1rem;
-  background: #8d2de293;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 12px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-}
-
-/*         CARDS              */
-
-.cards {
-  padding: 4rem 2rem;
-  background-color: var(--branco);
-}
-
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.card {
-  position: relative;
-  background-image: var(--bg-img, url('default.jpg'));
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 2rem;
-  width: 100%;
-  height: 320px;
-  border-radius: 16px;
-  box-shadow: 0 6px 16px var(--sombra);
-  text-align: center;
-  transition: all 0.4s ease-in-out;
-  background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-}
-
-.card:hover {
-  background-color: rgba(0, 0, 0, 0);
-  transform: translateY(-8px);
-  color: var(--branco);
-}
-
-.card h3 {
-  margin-top: 0;
-  font-size: 1.4rem;
-}
-
-/*     BOTÃO WHATSAPP         */
-
+/*BOTÃO WHATSAPP*/
 .whatsapp-btn {
   display: inline-block;
   margin-top: 0.5rem;
@@ -309,8 +285,7 @@ button:hover {
   outline-offset: 4px;
 }
 
-/*     SEÇÕES PADRÕES         */
-
+/*SEÇÕES PADRÕES*/
 section#sobre,
 section#contato {
   padding: 4rem 2rem;
@@ -318,8 +293,7 @@ section#contato {
   background-color: var(--cinza-claro);
 }
 
-/*           FOOTER           */
-
+/*FOOTER*/
 footer {
   background: var(--roxo);
   color: var(--branco);
@@ -330,8 +304,25 @@ footer {
   box-shadow: 0 -4px 12px var(--sombra);
 }
 
-/*        TEMA ESCURO         */
+/*Botão de limpar inscrições*/
+button {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background: #8d2de293;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
 
+button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/*TEMA ESCURO*/
 body.escuro {
   background-color: #121212;
   color: var(--texto);
@@ -471,7 +462,6 @@ body.escuro .whatsapp-btn:hover {
     padding: 2rem;
   }
 
-  
   nav ul {
     flex-direction: column;
     gap: 1rem;
