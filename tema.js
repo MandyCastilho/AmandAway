@@ -1,3 +1,5 @@
+// Separação do tema
+
 export function iniciarTema() {
   const temaToggle = document.getElementById("temaToggle");
 

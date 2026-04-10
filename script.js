@@ -29,7 +29,7 @@ if (form) {
       nome,
       email,
       destino,
-      data: new Date().toLocaleDateString("pt-BR") // Formato BR
+      data: new Date().toLocaleDateString("pt-BR") 
     };
 
     // Salvar no localStorage
