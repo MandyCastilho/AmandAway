@@ -214,6 +214,17 @@ form button:active {
   transition: opacity 0.3s ease;
 }
 
+/* Botão de limpar inscrições*/
+button {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: crimson;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
 /*         CARDS              */
 
 .cards {

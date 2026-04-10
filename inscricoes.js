@@ -7,6 +7,19 @@ const ul = document.getElementById("inscricoesUl");
 // Garante que o localStorage tenha uma lista válida
 const inscricoes = JSON.parse(localStorage.getItem("inscricoes")) || [];
 
+// 👇 CRIA O BOTÃO
+const btnLimpar = document.createElement("button");
+btnLimpar.textContent = "Limpar inscrições";
+
+// 👇 AÇÃO DO BOTÃO
+btnLimpar.addEventListener("click", () => {
+  localStorage.removeItem("inscricoes");
+  location.reload();
+});
+
+// 👇 ADICIONA NA TELA
+document.body.appendChild(btnLimpar);
+
 if (ul) {
   // Limpa o conteúdo antes de adicionar (boa prática)
   ul.innerHTML = "";

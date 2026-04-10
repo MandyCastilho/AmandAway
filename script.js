@@ -25,7 +25,6 @@ if (form) {
     return;
   }
 
-
     const inscricao = {
       nome,
       email,
